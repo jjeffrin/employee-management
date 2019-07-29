@@ -1,0 +1,18 @@
+<hr>
+<h3>Add New Employee</h3>
+<div class="form-group">
+    <label for="id"><strong class="text-muted">Employee ID</strong></label>
+    <input type="text" class="form-control" id="id" disabled value="{{employeeId}}">
+</div>
+<div class="form-group">
+    <label for="name"><strong class="text-muted">Employee Name</strong></label>
+    <input type="text" class="form-control" id="name" [(ngModel)]="employeeName" autofocus>
+</div>
+<div class="form-group">
+    <label for="role"><strong class="text-muted">Employee Role</strong></label>
+    <input type="text" class="form-control" id="role" [(ngModel)]="employeeRole">
+</div>
+<div class="form-group">
+    <button class="btn btn-primary mr-2" (click)="addEmployee()">Add Employee</button>
+    <button class="btn btn-danger" (click)="navigateToHome()">Cancel</button>
+</div>

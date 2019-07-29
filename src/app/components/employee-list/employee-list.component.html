@@ -1,0 +1,10 @@
+<div *ngIf="employees.length > 0; else noEmployees">
+    <app-employee *ngFor="let employee of employees" [employee]="employee"></app-employee>
+</div>
+
+<ng-template #noEmployees>
+    <h3>It's empty here...</h3>
+    <hr>
+    <h5>Add employees by clicking the button above :)</h5>
+</ng-template>
+
