@@ -39,7 +39,6 @@ export class EmployeeEditComponent implements OnInit {
     this.router.navigate(['/']);
   }
 
-  // Delete Employee
   deleteEmployee() {
     this.employeeService.deleteEmployee(Number(this.retrievedId));
     this.router.navigate(['/']);
