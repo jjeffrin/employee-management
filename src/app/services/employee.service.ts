@@ -21,7 +21,7 @@ export class EmployeeService {
     this.employeeList.push(employee);
   }
 
-  deleteEmployee(id: number) {
+  deleteEmployee(id: number): void {
     this.idToDelete = this.employeeList.indexOf(this.employeeList.filter(
       (employee) => {
         return employee.id === id;

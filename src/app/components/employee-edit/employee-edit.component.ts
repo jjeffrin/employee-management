@@ -35,11 +35,11 @@ export class EmployeeEditComponent implements OnInit {
     )
   }
 
-  navigateToHome() {
+  navigateToHome(): void {
     this.router.navigate(['/']);
   }
 
-  deleteEmployee() {
+  deleteEmployee(): void {
     this.employeeService.deleteEmployee(Number(this.retrievedId));
     this.router.navigate(['/']);
   }
