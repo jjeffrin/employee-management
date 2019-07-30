@@ -23,7 +23,9 @@ export class EmployeeEditComponent implements OnInit {
         this.retrievedId = params['id'];
         this.employee = this.getEmployeeDetailsById(Number(this.retrievedId));        
       }
-    );       
+    );     
+    let el = document.getElementById("scrollToView");
+    el.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});  
   }
 
   getEmployeeDetailsById(id: number) {

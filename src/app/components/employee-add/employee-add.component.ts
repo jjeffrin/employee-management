@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { EmployeeService } from 'src/app/services/employee.service';
 import { Router } from '@angular/router';
 
@@ -12,13 +12,16 @@ export class EmployeeAddComponent implements OnInit {
   employeeRole: string;
   employeeId: number;
   employee: object;
-
-  constructor(private employeeService: EmployeeService,
-              private router: Router
+  @ViewChild ('addEmployee', { static: false }) addEmp: ElementRef
+  constructor(
+    private employeeService: EmployeeService,
+    private router: Router
     ) { }
 
   ngOnInit() {
     this.updateEmployeeId();
+    let el = document.getElementById("scrollToView");
+    el.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
   }
   
   updateEmployeeId() {
