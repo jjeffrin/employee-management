@@ -11,8 +11,7 @@ import { EmployeeModel } from 'src/app/models/employee.model';
 export class EmployeeEditComponent implements OnInit {
   retrievedId: string;
   employee: EmployeeModel[];
-  employeeName: string;
-  employeeRole: string;
+
   constructor(private route: ActivatedRoute,
               private employeeService: EmployeeService,
               private router: Router

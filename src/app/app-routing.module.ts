@@ -1,7 +1,5 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { AppRoutingModule } from './app-routing.module';
+import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { EmployeeComponent } from './components/employee/employee.component';
@@ -10,20 +8,26 @@ import { EmployeeAddComponent } from './components/employee-add/employee-add.com
 import { EmployeeEditComponent } from './components/employee-edit/employee-edit.component';
 import { EmployeeService } from './services/employee.service';
 
+const appRoutes: Routes = [
+  {
+    path: 'addEmployee',
+    component: EmployeeAddComponent
+  },
+  {
+    path: 'editEmployee/:id',
+    component: EmployeeEditComponent
+  }
+];
+
+
 @NgModule({
-  declarations: [
-    AppComponent,
-    EmployeeComponent,
-    EmployeeListComponent,
-    EmployeeAddComponent,
-    EmployeeEditComponent
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    AppRoutingModule 
-  ],
-  providers: [EmployeeService],
-  bootstrap: [AppComponent]
+    imports: [
+        RouterModule.forRoot(appRoutes)
+    ],
+    exports: [
+        RouterModule
+    ]
 })
-export class AppModule { }
+export class AppRoutingModule {
+
+}
