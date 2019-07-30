@@ -26,16 +26,12 @@ export class EmployeeAddComponent implements OnInit {
   }
 
   addEmployee() {
-    // this.employeeService.onNewEmployeeAdd.emit({
-    //   id: this.employeeId,
-    //   name: this.employeeName,
-    //   role: this.employeeRole
-    // });
     this.employeeService.saveEmployee({
       id: this.employeeId,
       name: this.employeeName,
       role: this.employeeRole
     });
+    this.employeeName = this.employeeRole = '';
     this.updateEmployeeId();
   }
 
