@@ -7,12 +7,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  target: HTMLElement;
 
   constructor(private router: Router
     ) {}
 
-  addNewEmployee() {
-    this.router.navigate(['/addEmployee']);
-  }
 }
