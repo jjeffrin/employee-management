@@ -5,20 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { EmployeeAddComponent } from './components/employee-add/employee-add.component';
 import { EmployeeEditComponent } from './components/employee-edit/employee-edit.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import { AppComponent } from './app.component';
-import { HomeComponent } from './components/home/home.component';
 import { EmployeeListComponent } from './components/employee-list/employee-list.component';
-
-// const appRoutes: Routes = [
-//   {
-//     path: 'addEmployee',
-//     component: EmployeeAddComponent
-//   },
-//   {
-//     path: 'editEmployee/:id',
-//     component: EmployeeEditComponent
-//   }
-// ];
 
 const appRoutes: Routes = [
   {
